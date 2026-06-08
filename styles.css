@@ -1,0 +1,262 @@
+/* Fuentes y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8b400;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #333;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    background: url('images/galpon.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.btn {
+    background: #f85c00;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #d94a00;
+}
+
+/* Productos */
+.productos {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.productos h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card h3 {
+    margin: 1rem 0 0.5rem 0;
+}
+.card p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* Servicios */
+.servicios {
+    background: #f8f8f8;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.servicios h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.servicio-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+.servicio-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* Contacto */
+.contacto {
+    background: #f8b400;
+    color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+.btn-whatsapp:hover {
+    background: #1ebe57;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Hero con imagen personalizada y overlay */
+.hero {
+    position: relative;
+    background: url('images/image(96).png') center/cover no-repeat; /* tu imagen subida */
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Capa de color semitransparente */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 180, 0, 0.5); /* color naranja transparente bonito */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* aseguramos que el texto esté sobre el overlay */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Botón flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.whatsapp-float:hover {
+    background: #1ebe57;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #f8b400;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        margin: 1rem 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
